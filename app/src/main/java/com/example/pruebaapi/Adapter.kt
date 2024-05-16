@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
-class PaisAdapter(private val paises: List<Pais>) :
+class PaisAdapter(private val paises: List<Pais>, private val onItemClick: (Pais) -> Unit) :
     RecyclerView.Adapter<PaisAdapter.PaisViewHolder>() {
 
     inner class PaisViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -22,6 +22,11 @@ class PaisAdapter(private val paises: List<Pais>) :
             Glide.with(itemView.context)
                 .load(pais.flags.png)
                 .into(imgP)
+
+            // Configurar el clic en el itemView
+            itemView.setOnClickListener {
+                onItemClick(pais)
+            }
         }
     }
 
