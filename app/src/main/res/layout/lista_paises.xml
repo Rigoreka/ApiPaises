@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#e1fdca">
+    android:background="@color/trans">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#e1fdca">
+        android:background="@color/trans"
+        app:cardBackgroundColor="@color/trans"
+        app:cardCornerRadius="20dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -17,23 +19,35 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
-            android:background="#E1FDCA"
+            android:background="@color/white"
             android:paddingBottom="5dp">
 
             <TextView
+                android:id="@+id/textView"
+                android:layout_width="50dp"
+                android:layout_height="235dp"
+                android:layout_marginTop="4dp"
+                android:autoText="false"
+                android:background="#2836BA"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.49"
+                tools:layout_editor_absoluteX="1dp" />
+
+            <TextView
                 android:id="@+id/txtPais"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="154dp"
-                android:layout_marginTop="9dp"
-                android:layout_marginEnd="145dp"
-                android:layout_marginBottom="39dp"
+                android:layout_width="258dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="1dp"
+                android:gravity="center"
                 android:text="TextView"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/txtDescrip"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.688"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/divider" />
 
@@ -41,35 +55,14 @@
                 android:id="@+id/imgVBandera"
                 android:layout_width="wrap_content"
                 android:layout_height="72dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="38dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginStart="152dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/txtDescrip"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/divider"
-                app:layout_constraintVertical_bias="0.739"
+                app:layout_constraintVertical_bias="0.75"
                 app:srcCompat="@drawable/ic_launcher_background" />
-
-            <TextView
-                android:id="@+id/txtDescrip"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="58dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginEnd="108dp"
-                android:layout_marginBottom="32dp"
-                android:text="TextView"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imgVBandera"
-                app:layout_constraintTop_toBottomOf="@+id/divider"
-                app:layout_constraintVertical_bias="0.765" />
 
             <View
                 android:id="@+id/divider"

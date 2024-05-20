@@ -13,12 +13,12 @@ class PaisAdapter(private val paises: List<Pais>, private val onItemClick: (Pais
 
     inner class PaisViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val textName = itemView.findViewById<TextView>(R.id.txtPais)
-        private val textDescrip = itemView.findViewById<TextView>(R.id.txtDescrip)
+        //private val textDescrip = itemView.findViewById<TextView>(R.id.txtDescrip)
         private val imgP = itemView.findViewById<ImageView>(R.id.imgVBandera)
 
         fun bind(pais: Pais) {
             textName.text = pais.name.official
-            textDescrip.text = pais.capital.joinToString(",")
+            //textDescrip.text = pais.capital.joinToString(",")
             Glide.with(itemView.context)
                 .load(pais.flags.png)
                 .into(imgP)

@@ -1,6 +1,6 @@
 package com.example.pruebaapi
 
-data class Pais(val name:Name, val capital:List<String>,val flags:Flag)
+data class Pais(val name:Name, val capital:List<String>,val flags:Flag, val area:String,val population:String)
 
 data class Flag(val png:String, val alt:String)
 

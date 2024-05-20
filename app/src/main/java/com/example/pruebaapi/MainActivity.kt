@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         }
         binding.rclPaises.layoutManager = LinearLayoutManager(this)
         //Realizar la solicitud del endpoint de pi web con el cliente http
-        Fuel.get("https://restcountries.com/v3.1/all?fields=name,capital,flags")
+        Fuel.get("https://restcountries.com/v3.1/all?fields=name,capital,flags,area,population")
             .response() { request, response, result ->
                 //obtenemos resultado en formato json
                 val cuerpoJson = response.body().asString("application/json")
@@ -40,6 +40,8 @@ class MainActivity : AppCompatActivity() {
                         putExtra("EXTRA_PAIS_NAME", pais.name.official)
                         putExtra("EXTRA_PAIS_CAPITAL", pais.capital.joinToString(","))
                         putExtra("EXTRA_PAIS_FLAG",pais.flags.png)
+                        putExtra("EXTRA_PAIS_POBLACION",pais.population)
+                        putExtra("EXTRA_PAIS_AREA",pais.area)
                     }
                     startActivity(intent)
                 }

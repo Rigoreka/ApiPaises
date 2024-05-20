@@ -27,10 +27,14 @@ class Lista_Pais : AppCompatActivity() {
         val paisName = intent.getStringExtra("EXTRA_PAIS_NAME")
         val paisCapital = intent.getStringExtra("EXTRA_PAIS_CAPITAL")
         val paisFlag = intent.getStringExtra("EXTRA_PAIS_FLAG")
+        val paisArea=intent.getStringExtra("EXTRA_PAIS_AREA")
+        val paispoblacion=intent.getStringExtra("EXTRA_PAIS_POBLACION")
 
         // Mostrar los datos en las vistas correspondientes
         biding.txtPais.text = paisName
         biding.txtDescrip.text = paisCapital
+        biding.pob.text=paispoblacion
+        biding.area.text=paisArea
 
         Glide.with(this)
             .load(paisFlag)
